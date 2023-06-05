@@ -61,8 +61,8 @@ const footerLinks = [
   {
     title: "Links",
     links: [
-      { title: "GST Health Checkup", href: "landing/gst-health-checkup" },
-      { title: "Income Tax Return", href: "landing/income-tax-return" },
+      { title: "GST Health Checkup", href: "/landing/gst-health-checkup" },
+      { title: "Income Tax Return", href: "/landing/income-tax-return" },
       { title: "Book Appointment", href: "/book-appointment" },
       { title: "Contact", href: "/contact" },
       { title: "Privacy Policy", href: "/privacy-policy" },

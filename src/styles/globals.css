@@ -26,13 +26,13 @@
     @apply w-full;
   }
   .article p {
-    @apply leading-normal text-lg py-2 text-gray-700;
+    @apply leading-normal text-lg py-2 text-gray-600;
   }
   .article ul {
-    @apply list-disc ml-6 my-4;
+    @apply list-disc ml-6 my-4 text-gray-600;
   }
   .article ol {
-    @apply list-decimal ml-6 my-4;
+    @apply list-decimal ml-6 my-4 text-gray-600;
   }
   .article a {
     @apply text-blue-600;

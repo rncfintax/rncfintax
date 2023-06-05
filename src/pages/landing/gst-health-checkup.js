@@ -64,7 +64,7 @@ function Hero() {
                             <div className='flex items-center justify-center'>
                                 <img className='mb-4' width={150} src="/logo.png" alt="RNC Fintax" />
                             </div>
-                            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:leading-tight capitalize font-josefin_sans">
+                            <h1 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:leading-relaxed capitalize">
                                 Register For free GST health checkup in Khairthal
                             </h1>
                             <p className="mt-6 text-base leading-8 text-gray-600">The GST Health Check provides valuable insights into the GSTIN. This report highlights key aspects such as delayed GST Return filings, delays in reporting outward supplies, tax variations between GSTR-3B and GSTR-1, changes in claimed Input Tax Credit (ITC) compared to GSTR-2, unclaimed ITC on taxes paid under Reverse Charge.</p>
