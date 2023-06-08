@@ -30,11 +30,11 @@ export default function ContactForm() {
                 </div>
                 <div className="relative mb-4">
                     <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email*</label>
-                    <input type="email" id="email" name="Email" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required placeholder="ramsingh@gmail.com" />
+                    <input pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" type="email" id="email" name="Email" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required placeholder="ramsingh@gmail.com" />
                 </div>
                 <div className="relative mb-4">
                     <label htmlFor="phone" className="leading-7 text-sm text-gray-600">Phone*</label>
-                    <input type="tel" id="phone" name="Phone" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required placeholder="9876543210" />
+                    <input pattern="^(0|91)?[6-9][0-9]{9}$" type="tel" id="phone" name="Phone" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required placeholder="9256317271" />
                 </div>
                 <div className="relative mb-4">
                     <label htmlFor="category" className="leading-7 text-sm text-gray-600">Select Category*</label>

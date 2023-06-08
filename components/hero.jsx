@@ -7,6 +7,9 @@ export default function Hero({ data }) {
       <Head>
         <title>{data.heading}</title>
         <meta name="description" content={data.subheading} />
+        <meta property="og:title" content={data.heading} />
+        <meta property="og:description" content={data.subheading} />
+        <meta property="og:image" content="/img/thumb4.jpg" />
       </Head>
       <section className="bg-gradient-to-tr from-blue-500 via-blue-500 to-purple-600 text-center text-white">
         <div className="h-96 max-w-5xl px-5 lg:mx-auto flex flex-col gap-4 justify-center items-center">

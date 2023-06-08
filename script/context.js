@@ -1,28 +1,15 @@
-import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth"
-import { init } from "./firebase";
+import { createContext, useEffect, useState } from "react"
 
 // create context
 export const Context = createContext()
 
-// firebase
-const auth = getAuth(init)
-auth.languageCode = 'it'
-
-const provider = new GoogleAuthProvider()
-
-const signIn = async () => {
-    const result = await signInWithPopup(auth, provider)
-}
-
 export default function MyContext({ children }) {
-    const [user, loading] = useAuthState(auth)
-
     // blogger blog post state
     const [bloggerPost, setBloggerPost] = useState([])
     // if post loading
     const [postLoading, setPostLoading] = useState(true)
+    // current payment details
+    const [paymentDetail, setPaymentDetail] = useState([])
 
     useEffect(() => {
         const url =
@@ -38,12 +25,10 @@ export default function MyContext({ children }) {
 
     return (
         <Context.Provider value={{
-            auth,
-            user,
-            loading,
-            signIn,
             bloggerPost,
             postLoading,
+            paymentDetail,
+            setPaymentDetail
         }}>
             {children}
         </Context.Provider>

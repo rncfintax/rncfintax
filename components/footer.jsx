@@ -21,7 +21,7 @@ const social = [
   {
     title: "Whatsapp",
     icon: BsWhatsapp,
-    link: "https://api.whatsapp.com/send?phone=15551234567",
+    link: "https://api.whatsapp.com/send?phone=9256317271",
   },
   {
     title: "Linkedin",
@@ -72,7 +72,7 @@ const footerLinks = [
     title: "Contact",
     links: [
       { title: "rncfintax@gmail.com", href: "mailto:rncfintax@gmail.com" },
-      { title: "+91 9876543210", href: "tel:+91 9876543210" },
+      { title: "+91 9256317271", href: "tel:+91 9256317271" },
     ],
   },
 ];

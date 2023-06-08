@@ -25,7 +25,7 @@ export default function Contact() {
                                 <h2 className="title-font mt-4 font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
                                 <a className="text-blue-500 leading-relaxed">rncfintax@gmail.com</a>
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-                                <a href="tel:01460222299" className="leading-relaxed">01460222299</a>
+                                <a href="tel:9256317271" className="leading-relaxed">+91 9256317271</a>
                             </div>
                         </div>
                     </div>

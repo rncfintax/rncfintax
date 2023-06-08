@@ -1,5 +1,8 @@
+import { useRouter } from "next/router";
+import { useContext } from "react";
 import { MdDone } from "react-icons/md"
 import { FaStarOfLife } from "react-icons/fa"
+import { Context } from "../script/context";
 
 export default function PaymentSection({ data }) {
   return (
@@ -49,7 +52,15 @@ export default function PaymentSection({ data }) {
 }
 
 function PayCard({ data, heading }) {
+  const router = useRouter()
+  const { setPaymentDetail } = useContext(Context)
+
   const offer = data.price - Math.floor(data.price * (data.percentage / 100))
+
+  function handlePaymentDetail() {
+    setPaymentDetail([data, heading])
+    router.push('/payment')
+  }
 
   return (
     <div className="bg-white p-2 lg:p-5 border border-gray-300 rounded-md drop-shadow-sm flex flex-col justify-between">
@@ -84,12 +95,12 @@ function PayCard({ data, heading }) {
                 <span className="ml-5 text-white bg-green-700 p-px px-1">{data.percentage}% Off</span>
               </p>
             </div>
-            <button className="rounded-md bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600" onClick={() => alert(offer)}>
+            <button className="rounded-md bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600" onClick={handlePaymentDetail}>
               Get Started
             </button>
           </>
           :
-          <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=7014317271&text=${heading}: ${data.name} Plan`} className="mt-4 text-center rounded-md bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700">
+          <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=9256317271&text=${heading}: ${data.name} Plan`} className="mt-4 text-center rounded-md bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700">
             Connect with Advisor
           </a>
       }

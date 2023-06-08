@@ -75,7 +75,7 @@ export default function Header() {
                     ))}
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="tel:987654321" className="text-xs font-semibold bg-blue-500 hover:bg-indigo-500 text-white py-2 px-3 rounded">
+                    <a href="tel:9256317271" className="text-xs font-semibold bg-blue-500 hover:bg-indigo-500 text-white py-2 px-3 rounded">
                         Book Appointment
                     </a>
                 </div>
@@ -131,7 +131,7 @@ export default function Header() {
                                 </Disclosure>
                             </div>
                             <div className="py-6 text-center">
-                                <a href="tel:987654321"
+                                <a href="tel:9256317271"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-blue-500 hover:bg-indigo-500">
                                     Book Appointment
                                 </a>

@@ -8,7 +8,11 @@ export default function Document() {
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="icon-192x192.png" type="image/png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta property="description" content="" />
         <meta name="theme-color" content="#000000" />
+        <meta property="og:title" content="RNC Fintax" />
+        <meta property="og:description" content="" />
+        <meta property="og:locale" content="en_US" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />

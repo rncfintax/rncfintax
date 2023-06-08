@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import Countdown from 'react-countdown'
-import ArticleWrapper from "../../../components/articlewrapper"
 import { useRef } from "react"
+import Countdown from 'react-countdown'
+import { BsTelephoneFill } from "react-icons/bs"
+import ArticleWrapper from "../../../components/articlewrapper"
 
 export default function GSTHealthCheckup() {
     return (
@@ -9,6 +10,7 @@ export default function GSTHealthCheckup() {
             <Head>
                 <title>Free GST Health Checkup In Khairthal</title>
                 <meta name="description" content="" />
+                <meta property="og:image" content="/img/thumb1.jpg" />
             </Head>
             <Hero />
             <Video />
@@ -69,7 +71,10 @@ function Hero() {
                             </h1>
                             <p className="mt-6 text-base leading-8 text-gray-600">The GST Health Check provides valuable insights into the GSTIN. This report highlights key aspects such as delayed GST Return filings, delays in reporting outward supplies, tax variations between GSTR-3B and GSTR-1, changes in claimed Input Tax Credit (ITC) compared to GSTR-2, unclaimed ITC on taxes paid under Reverse Charge.</p>
                             <div className="mt-10 flex items-center justify-center">
-                                <button ref={handleScroll} className="rounded-md bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600">Book Appintment</button>
+                            <a href='tel:+91 9256317271' ref={handleScroll} className="rounded-md bg-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 flex items-center gap-3">
+                                    <BsTelephoneFill />
+                                    <span>Book Appintment</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +92,7 @@ function Video() {
         <section className="bg-white">
             <div className='max-w-4xl mx-5 md:mx-auto'>
                 <video preload='true' className="w-full outline-none border-none" controls>
-                    <source src="/vid/intro.mp4" type="video/mp4" />
+                    <source src="/vid/gst.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -140,20 +145,20 @@ function GSTHealthCheckupForm() {
     return (
         <form onSubmit={handleForm} method="post" autoComplete="off" name="google-sheet">
             <div className="mb-6">
-                <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Name</label>
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Name<span className='text-red-600'>*</span></label>
                 <input type="text" name='Name' id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder="Enter Name" required />
             </div>
             <div className="mb-6">
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email</label>
-                <input type="email" name='Email' id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder="name@flowbite.com" required />
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Email<span className='text-red-600'>*</span></label>
+                <input pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$' type="email" name='Email' id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder="name@email.com" required />
             </div>
             <div className="mb-6">
-                <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900">Phone</label>
-                <input type="tel" name='Phone' id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder='+91 9876543210' required />
+                <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900">Phone<span className='text-red-600'>*</span></label>
+                <input pattern='^(0|91)?[6-9][0-9]{9}$' type="tel" name='Phone' id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder='+91 9256317271' required />
             </div>
             <div className="mb-6">
                 <label htmlFor="gstnum" className="block mb-2 text-sm font-medium text-gray-900">GST Number</label>
-                <input type="text" name='GSTNumber' id="gstnum" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder='GST Number' required />
+                <input pattern='^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$' type="text" name='GSTNumber' id="gstnum" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder='GST Number' />
             </div>
             <input type="submit" className="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
         </form>
