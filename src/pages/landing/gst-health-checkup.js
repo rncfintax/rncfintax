@@ -8,9 +8,12 @@ export default function GSTHealthCheckup() {
     return (
         <>
             <Head>
-                <title>Free GST Health Checkup In Khairthal</title>
-                <meta name="description" content="" />
-                <meta property="og:image" content="/img/thumb1.jpg" />
+                <title>GST Health Checkup</title>
+                <meta name="description" content="Free health checkup in khairthal, register now." />
+                <meta property="og:title" content="Free GST Health Checkup In Khairthal" />
+                <meta property="og:description" content="Free health checkup in khairthal, register now." />
+                <meta property="og:url" content="https://rncfintax.com/landing/gst-health-checkup" />
+                <meta property="og:image" content="https://rncfintax.com/img/thumb1.jpg" />
             </Head>
             <Hero />
             <Video />
