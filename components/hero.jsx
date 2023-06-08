@@ -1,7 +1,10 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import PaymentSection from "./paymentsection";
 
 export default function Hero({ data }) {
+  const router = useRouter()
+
   return (
     <>
       <Head>
@@ -9,7 +12,8 @@ export default function Hero({ data }) {
         <meta name="description" content={data.subheading} />
         <meta property="og:title" content={data.heading} />
         <meta property="og:description" content={data.subheading} />
-        <meta property="og:image" content="/img/thumb4.jpg" />
+        <meta property="og:image" content="https://rncfintax.com/img/thumb4.jpg" />
+        <meta property="og:url" content={router.asPath} />
       </Head>
       <section className="bg-gradient-to-tr from-blue-500 via-blue-500 to-purple-600 text-center text-white">
         <div className="h-96 max-w-5xl px-5 lg:mx-auto flex flex-col gap-4 justify-center items-center">
