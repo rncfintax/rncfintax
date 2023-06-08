@@ -71,7 +71,7 @@ const footerLinks = [
   {
     title: "Contact",
     links: [
-      { title: "rncfintax@gmail.com", href: "mailto:rncfintax@gmail.com" },
+      { title: "Info.rncfintax@gmail.com", href: "mailto:Info.rncfintax@gmail.com" },
       { title: "+91 9256317271", href: "tel:+91 9256317271" },
     ],
   },

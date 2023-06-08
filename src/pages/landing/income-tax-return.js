@@ -4,8 +4,6 @@ import { BsTelephoneFill } from "react-icons/bs"
 import ArticleWrapper from "../../../components/articlewrapper"
 
 export default function IncomeTaxReturn() {
-    const router = useRouter()
-    console.log(router);
     return (
         <>
             <Head>
@@ -14,10 +12,6 @@ export default function IncomeTaxReturn() {
                 <meta property="og:title" content="Income Tax Retrun In Khairthal" />
                 <meta property="og:description" content="E-Income Tax Return Filing in Khairthal, Contact us and we will file your ITR Online." />
                 <meta property="og:image" content="/img/thumb4.jpg" />
-                <meta property="og:image" content="<generated>" />
-<meta property="og:image:type" content="<generated>" />
-<meta property="og:image:width" content="<generated>" />
-<meta property="og:image:height" content="<generated>" />
             </Head>
             <Hero />
             <Video />
@@ -39,14 +33,6 @@ function Hero() {
 
     function handleScroll() {
         ref.current?.scrollIntoView({ behavior: 'smooth' })
-    }
-
-    const renderer = ({ days, hours, completed }) => {
-        if (completed) {
-            return "00 00"
-        } else {
-            return <span> {days} days {hours} hours</span>
-        }
     }
 
     return (

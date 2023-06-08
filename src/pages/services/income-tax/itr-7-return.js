@@ -160,7 +160,7 @@ function Article() {
       </p>
       <p>
         If you require further assistance or have any specific queries regarding
-        the ITR-7 form, feel free to reach out to us at rncfintax@gmail.com. We
+        the ITR-7 form, feel free to reach out to us at Info.rncfintax@gmail.com. We
         are here to support you in every step of your tax filing journey. Happy
         filing!
       </p>
