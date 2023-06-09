@@ -2,6 +2,9 @@ import Head from 'next/head'
 import { useRef } from "react"
 import { BsTelephoneFill } from "react-icons/bs"
 import ArticleWrapper from "../../../components/articlewrapper"
+import { Josefin_Sans } from "next/font/google"
+
+const josefinsans = Josefin_Sans({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'] })
 
 export default function IncomeTaxReturn() {
     return (
@@ -21,7 +24,7 @@ export default function IncomeTaxReturn() {
             </ArticleWrapper>
             <section className='py-20 bg-slate-100'>
                 <div className='w-full md:w-96 lg:w-115 mx-auto p-5 md:p-10 md:rounded-lg bg-white drop-shadow-xl'>
-                    <h2 className='text-2xl font-bold font-josefin_sans text-center mb-6'>Income Tax Return</h2>
+                    <h2 className={`text-2xl font-bold text-center mb-6 ${josefinsans.className}`}>Income Tax Return</h2>
                     <IncomeTaxReturnFrom />
                 </div>
             </section>

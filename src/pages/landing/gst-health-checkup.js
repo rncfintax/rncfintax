@@ -3,6 +3,9 @@ import { useRef } from "react"
 import Countdown from 'react-countdown'
 import { BsTelephoneFill } from "react-icons/bs"
 import ArticleWrapper from "../../../components/articlewrapper"
+import { Josefin_Sans } from "next/font/google"
+
+const josefinsans = Josefin_Sans({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'] })
 
 export default function GSTHealthCheckup() {
     return (
@@ -22,7 +25,7 @@ export default function GSTHealthCheckup() {
             </ArticleWrapper>
             <section className='py-20 bg-slate-100'>
                 <div className='w-full md:w-96 lg:w-115 mx-auto p-5 md:p-10 md:rounded-lg bg-white drop-shadow-xl'>
-                    <h2 className='text-2xl font-bold font-josefin_sans text-center'>Register a free GST health checkup session</h2>
+                    <h2 className={`text-2xl font-bold text-center ${josefinsans.className}`}>Register a free GST health checkup session</h2>
                     <GSTHealthCheckupForm />
                 </div>
             </section>
@@ -74,7 +77,7 @@ function Hero() {
                             </h1>
                             <p className="mt-6 text-base leading-8 text-gray-600">The GST Health Check provides valuable insights into the GSTIN. This report highlights key aspects such as delayed GST Return filings, delays in reporting outward supplies, tax variations between GSTR-3B and GSTR-1, changes in claimed Input Tax Credit (ITC) compared to GSTR-2, unclaimed ITC on taxes paid under Reverse Charge.</p>
                             <div className="mt-10 flex items-center justify-center">
-                            <a href='tel:+91 9256317271' ref={handleScroll} className="rounded-md bg-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 flex items-center gap-3">
+                                <a href='tel:+91 9256317271' ref={handleScroll} className="rounded-md bg-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 flex items-center gap-3">
                                     <BsTelephoneFill />
                                     <span>Book Appintment</span>
                                 </a>

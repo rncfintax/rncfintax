@@ -11,9 +11,6 @@ export default function Document() {
         <meta property="description" content="" />
         <meta name="theme-color" content="#000000" />
         <meta property="og:locale" content="en_US" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
       </Head>
       <body className='text-slate-950'>
         <Main />

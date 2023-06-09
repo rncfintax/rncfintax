@@ -32,12 +32,12 @@ export default function BlogCard({ NumberOfPost, page }) {
     <>
       {bloggerPost.slice(0, NumberOfPost).map(data => (
         <div key={data.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-          <Link href={page + slug(data.url)}>
-            <img loading='lazy'  alt={data.title} width={300} height={250} className="rounded-t-lg w-full object-cover object-center h-48 lg:h-52" src={thumbnail(data.content)} />
+          <Link href={page + slug(data.url)} aria-label={data.title}>
+            <img loading='lazy' alt={data.title} width={300} height={250} className="rounded-t-lg w-full object-cover object-center h-48 lg:h-52" src={thumbnail(data.content)} />
           </Link>
           <div className="p-5">
-            <Link href={page + slug(data.url)}>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{data.title.length >= 55 ? data.title.slice(0, 55) + '...' : data.title}</h5>
+            <Link href={page + slug(data.url)} aria-label={data.title}>
+              <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{data.title.length >= 55 ? data.title.slice(0, 55) + '...' : data.title}</h3>
             </Link>
             <p className="mb-3 font-normal text-gray-700">{convert(data.content, options).slice(0, 150) + '...'}</p>
           </div>

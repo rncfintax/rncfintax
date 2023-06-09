@@ -1,6 +1,9 @@
 import Head from "next/head";
-import ContactForm from "../../components/contactform";
 import Hero from "../../components/hero";
+import ContactForm from "../../components/contactform";
+import { DM_Serif_Display } from "next/font/google"
+
+const dm_serif_display = DM_Serif_Display({ subsets: ["latin"], weight: ['400'] })
 
 const post_info = {
     heading: "Contact",
@@ -30,7 +33,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="md:w-1/2 bg-white flex flex-col md:ml-auto w-full py-8 lg:py-0 mt-8 md:mt-0">
-                        <h2 className="text-gray-900 text-3xl mb-1 title-font font-dm_serif_display">Contact Us</h2>
+                        <h2 className={`text-gray-900 text-3xl mb-1 title-font ${dm_serif_display.className}`}>Contact Us</h2>
                         <p className="leading-relaxed mb-5 text-gray-600"></p>
                         <ContactForm />
                     </div>

@@ -21,10 +21,6 @@ module.exports = {
       maxHeight: {
         160: "40rem",
       },
-      fontFamily: {
-        dm_serif_display: ["DM Serif Display", "serif"],
-        poppins: ["Poppins", 'sans-serif']
-      },
     },
   },
   plugins: [],

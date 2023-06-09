@@ -1,4 +1,7 @@
 import Head from "next/head"
+import { DM_Serif_Display } from "next/font/google"
+
+const dm_serif_display = DM_Serif_Display({ subsets: ["latin"], weight: ['400'] })
 
 export default function About() {
     return (
@@ -17,7 +20,7 @@ function AboutHero() {
         <section>
             <div className="aboutHero bg-no-repeat bg-center bg-cover">
                 <div className="flex flex-col items-center justify-center mx-auto lg:min-h-160 min-h-80 bg-slate-950/50 rounded-xl">
-                    <h1 className="text-3xl lg:text-5xl text-center text-white lg:leading-tight font-dm_serif_display px-5 lg:px-0">We're Changing the whole game.</h1>
+                    <h1 className={`text-3xl lg:text-5xl text-center text-white lg:leading-tight px-5 lg:px-0 ${dm_serif_display.className}`}>We're Changing the whole game.</h1>
                 </div>
             </div>
         </section>

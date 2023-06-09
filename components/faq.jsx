@@ -1,11 +1,14 @@
 import { TbChevronUp, TbChevronDown } from "react-icons/tb"
 import { useState } from "react"
+import { DM_Serif_Display } from "next/font/google"
+
+const dm_serif_display = DM_Serif_Display({ subsets: ["latin"], weight: ['400'] })
 
 export function FAQWrapper({ children }) {
     return (
         <section className="py-20 bg-gray-100">
             <div>
-                <h3 className="text-3xl font-dm_serif_display text-center mb-10">FAQ's</h3>
+                <h3 className={`text-3xl ${dm_serif_display.className} text-center mb-10`}>FAQ's</h3>
             </div>
             {children}
         </section>

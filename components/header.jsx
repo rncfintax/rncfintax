@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Fragment, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import { FiChevronDown } from 'react-icons/fi'
@@ -19,7 +20,7 @@ export default function Header() {
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">RNC Fintax</span>
-                        <img className='h-auto' loading='lazy' width="100" src="/logo.png" alt="RNC Fintax" />
+                        <Image loading="lazy" width={100} height={50} src="/logo.png" alt="RNC Fintax" />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -75,7 +76,7 @@ export default function Header() {
                     ))}
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="tel:9256317271" className="text-xs font-semibold bg-blue-500 hover:bg-indigo-500 text-white py-2 px-3 rounded">
+                    <a href="tel:9256317271" className="text-xs font-semibold bg-black hover:bg-blue-500 text-white py-2 px-3 rounded">
                         Book Appointment
                     </a>
                 </div>
@@ -132,7 +133,7 @@ export default function Header() {
                             </div>
                             <div className="py-6 text-center">
                                 <a href="tel:9256317271"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-blue-500 hover:bg-indigo-500">
+                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-black hover:bg-blue-500">
                                     Book Appointment
                                 </a>
                             </div>
