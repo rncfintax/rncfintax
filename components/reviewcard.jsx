@@ -1,15 +1,18 @@
+import { IoMdQuote } from "react-icons/io"
 import { TiStar, TiStarHalf } from "react-icons/ti"
 
 export default function ReviewCard({ data }) {
     return (
         <>
             <figure className="max-w-screen-md mx-auto text-center">
-                <svg aria-hidden="true" className="w-12 h-12 mx-auto mb-3 text-gray-400" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" /></svg>
+                <div className="text-slate-500 grid place-items-center mb-5">
+                    <IoMdQuote fontSize={48} />
+                </div>
                 <blockquote>
-                    <q className="text-lg lg:text-2xl italic font-medium text-gray-900">{data.review}</q>
+                    <q className="text-lg lg:text-2xl italic font-medium text-gray-800">{data.review}</q>
                 </blockquote>
                 <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                    <cite className="pr-3 font-medium text-gray-900">{data.name}</cite>
+                    <cite className="pr-3 font-medium text-gray-950">{data.name}</cite>
                 </figcaption>
                 <Stars star={data.rating} />
             </figure>
@@ -20,7 +23,7 @@ export default function ReviewCard({ data }) {
 function Stars({ star }) {
     return (
         <div className="mt-4 flex gap-5 justify-center items-center text-sm text-gray-500">
-            <h6 className="font-bold text-xl">{star > 5 ? '5.0' : star}</h6>
+            <h4 className="font-bold text-xl">{star > 5 ? '5.0' : star}</h4>
             <ReviewStar rating={star} />
         </div>
     )

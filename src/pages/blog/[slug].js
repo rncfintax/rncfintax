@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
+import { BiFootball } from "react-icons/bi"
 import { HiUserCircle } from "react-icons/hi"
 import { Context } from "../../../script/context"
 import { useEffect, useState, useContext } from "react"
@@ -29,10 +30,21 @@ export default function BlogPost() {
             </Head>
             <section className="my-10 max-w-2xl md:mx-auto lg:my-20">
                 <div className="items-baseline">
-                    {postLoading ? "Loading" : <Content data={myPost} />}
+                    {postLoading ? <LoadingComponent /> : <Content data={myPost} />}
                 </div>
             </section>
         </>
+    )
+}
+
+function LoadingComponent() {
+    return (
+        <div className="grid place-items-center">
+            <div className="animate-bounce scale-150 grid place-items-center">
+                <BiFootball fontSize={64} />
+            </div>
+            <div className="bg-gray-950 w-8 blur-sm rounded-full h-1"></div>
+        </div>
     )
 }
 

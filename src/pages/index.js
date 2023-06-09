@@ -163,7 +163,7 @@ function HomeBlog() {
   )
 }
 
-function Testimonial() {
+export function Testimonial() {
   return (
     <div className="py-20 px-5">
       <Splide options={{ arrows: false, pagination: false, autoplay: "play" }} aria-label="Testimonials">

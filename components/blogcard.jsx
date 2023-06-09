@@ -37,9 +37,9 @@ export default function BlogCard({ NumberOfPost, page }) {
           </Link>
           <div className="p-5">
             <Link href={page + slug(data.url)} aria-label={data.title}>
-              <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{data.title.length >= 55 ? data.title.slice(0, 55) + '...' : data.title}</h3>
+              <h3 className="mb-2 text-xl font-semibold tracking-tight text-gray-900">{data.title.length >= 55 ? data.title.slice(0, 55) + '...' : data.title}</h3>
             </Link>
-            <p className="mb-3 font-normal text-gray-700">{convert(data.content, options).slice(0, 150) + '...'}</p>
+            <p className="mb-3 text-sm font-normal text-gray-700">{convert(data.content, options).slice(0, 147) + '...'}</p>
           </div>
         </div>
       ))}
