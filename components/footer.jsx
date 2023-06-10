@@ -21,7 +21,7 @@ const social = [
   {
     title: "Whatsapp",
     icon: BsWhatsapp,
-    link: "https://api.whatsapp.com/send?phone=9256317271",
+    link: "https://api.whatsapp.com/send?phone=+919256317271",
   },
   {
     title: "Linkedin",

@@ -67,9 +67,9 @@ function Content({ data }) {
             <div className="mb-1 mx-5 sm:mx-0">
                 <h1 className={`text-2xl md:text-4xl mb-3 leading-relaxed font-bold ${josefinsans.className}`}>{data.title}</h1>
                 <div className="flex justify-between items-center">
-                    <h5 className="flex items-center gap-2 text-gray-700">
-                        <HiUserCircle />
-                        {/* <span>{data.author.displayName}</span> */}
+                    <h5 className="flex items-center gap-2 text-gray-700 mb-4">
+                        <HiUserCircle fontSize={20} />
+                        <span>RNC Fintax</span>
                         <span>-</span>
                         <span>{date(data.published)}</span>
                     </h5>

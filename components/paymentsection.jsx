@@ -100,7 +100,7 @@ function PayCard({ data, heading }) {
             </button>
           </>
           :
-          <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=9256317271&text=${heading}: ${data.name} Plan`} className="mt-4 text-center rounded-md bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700">
+          <a target="_blank" rel="noreferrer" href={`https://api.whatsapp.com/send?phone=+919256317271&text=${heading}: ${data.name} Plan`} className="mt-4 text-center rounded-md bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-700">
             Connect with Advisor
           </a>
       }

@@ -1,12 +1,15 @@
-import Head from "next/head";
 import FAQ, { FAQWrapper } from "../../components/faq";
+import Hero from "../../components/hero";
+
+const post_info = {
+  heading: "Frequently Asked Questions",
+  subheading: "Have questions? we're here to help."
+}
 
 export default function FAQs() {
   return (
     <>
-      <Head>
-        <title>FAQs</title>
-      </Head>
+      <Hero data={post_info} />
       <section className="py-10 bg-gray-100">
         <FAQWrapper>
           {faq_data.map((e, i) => <FAQ key={i} data={e} />)}

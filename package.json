@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-video": "^0.8.0",
     "html-to-text": "^9.0.5",
     "next": "13.2.4",
     "next-sitemap": "^4.1.3",

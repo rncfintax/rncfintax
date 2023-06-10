@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { useRef } from "react"
 import Countdown from 'react-countdown'
 import { BsTelephoneFill } from "react-icons/bs"
@@ -62,7 +63,7 @@ function Hero() {
                                 <a href="#" className="font-semibold text-blue-600">
                                     <span className="absolute inset-0" aria-hidden="true" />
                                     <Countdown
-                                        date={Date.now() + (new Date('05-25-2023') - new Date())}
+                                        date={Date.now() + (new Date('06-25-2023') - new Date())}
                                         renderer={renderer}
                                     />,<span aria-hidden="true"> 🎉</span>
                                 </a>
@@ -70,7 +71,7 @@ function Hero() {
                         </div>
                         <div className="text-center">
                             <div className='flex items-center justify-center'>
-                                <img className='mb-4' width={150} src="/logo.png" alt="RNC Fintax" />
+                                <Image className='mb-4' width={150} height={50} src="/logo.png" alt="RNC Fintax" />
                             </div>
                             <h1 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:leading-relaxed capitalize">
                                 Register For free GST health checkup in Khairthal

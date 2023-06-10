@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { useRef } from "react"
 import { BsTelephoneFill } from "react-icons/bs"
 import ArticleWrapper from "../../../components/articlewrapper"
@@ -49,7 +50,7 @@ function Hero() {
                     <div className="mx-auto max-w-2xl py-16 sm:py-20">
                         <div className="text-center">
                             <div className='flex items-center justify-center'>
-                                <img className='mb-4' width={150} src="/logo.png" alt="RNC Fintax" />
+                                <Image className='mb-4' width={150} height={50} src="/logo.png" alt="RNC Fintax" />
                             </div>
                             <h1 className="text-2xl font-semibold tracking-tight text-gray-800 sm:text-5xl lg:leading-relaxed capitalize">
                                 E-Income Tax Return Filing 2023-24 in Khairthal

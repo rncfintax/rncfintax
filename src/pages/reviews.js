@@ -1,4 +1,3 @@
-import Head from "next/head"
 import { Testimonial } from "."
 import Hero from "../../components/hero"
 
@@ -10,9 +9,6 @@ const post_info = {
 export default function Reviews() {
     return (
         <>
-            <Head>
-                <title>Reviews</title>
-            </Head>
             <Hero data={post_info} />
             <Testimonial />
         </>

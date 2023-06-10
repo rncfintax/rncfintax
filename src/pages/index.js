@@ -12,6 +12,7 @@ import ServicesCards from '../../components/servicecards'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import TextTransition, { presets } from 'react-text-transition'
 import { Josefin_Sans, DM_Serif_Display } from "next/font/google"
+import Image from 'next/image'
 
 const josefinsans = Josefin_Sans({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700'] })
 
@@ -22,7 +23,8 @@ export default function Home() {
     <>
       <Head>
         <title>RNC Fintax</title>
-        <meta name="description" content="" />
+        <meta name="keywords" content="RNC Fintax, rncfintax, Private Limited Company, Trademark, GST, Income Tax, TDS filing, Payroll, MSME registration"></meta>
+        <meta name="description" content="A platform for Income tax filing, TDS filing, Company, MSME, Payroll, Copyright, Trademark, GST Registration. Unlock financial potential with RNC Fintax." />
       </Head>
       <Hero />
       <TagLine />
@@ -38,36 +40,50 @@ export default function Home() {
   )
 }
 
-const TEXTS = [
-  'We help Statups',
-  'Filing Income Tax',
-  'Goods & Service Tax Filing',
-  'Trademark Registration',
-  'Import Export Code Registration'
-];
+// const TEXTS = [
+//   'We help Statups',
+//   'Filing Income Tax',
+//   'Goods & Service Tax Filing',
+//   'Trademark Registration',
+//   'Import Export Code Registration'
+// ];
+
+const hero_data = [
+  {
+    img: "/img/hero1.jpg",
+    text: "Helping Business"
+  },
+  {
+    img: "/img/hero2.jpg",
+    text: "Goods & Service Tax Filing"
+  },
+  {
+    img: "/img/hero3.jpg",
+    text: "Startup Registration"
+  },
+  {
+    img: "/img/hero4.jpg",
+    text: "File Tax Return"
+  }
+]
 
 function Hero() {
-  const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000, // every 3 seconds
-    );
-    return () => clearTimeout(intervalId)
-  }, [])
-
   return (
-    <section className="bg-cover bg-center heroimg">
-      <div className="h-80 lg:h-hero max-h-160">
-        <div className="h-full flex flex-col max-w-5xl mx-auto justify-center items-center">
-          <h1 className={`${dm_serif_display.className} text-center text-slate-950 break-words overflow-hidden xl:leading-relaxed text-xl md:text-3xl lg:text-4xl xl:text-5xl`}>
-            <TextTransition direction='up' inline={true} springConfig={presets.gentle}>
-              {TEXTS[index % TEXTS.length]}
-            </TextTransition>
-          </h1>
-          <a className="inline-block mt-6 text-white rounded py-2 px-4 bg-black hover:bg-blue-500 font-medium" href="/book-appointment">Book Appointment</a>
-        </div>
+    <section className="bg-cover bg-center">
+      <div className="h-80 lg:h-hero max-h-160 relative">
+        <Splide options={{ type: 'loop', arrows: false, pagination: false, autoplay: "play", rewind: true, hasTrack: true }} aria-label="RNC Fintax">
+          {
+            hero_data.map((item, i) => (
+              <SplideSlide className='relative' key={i}>
+                <Image className='h-80 lg:h-hero w-full object-cover object-center absolute' alt={item.text} src={item.img} width={1600} height={500} />
+                <div className='h-80 lg:h-hero w-full hover:backdrop-blur-sm bg-gray-950/30 relative flex flex-col justify-center items-center'>
+                  <h1 className={`drop-shadow-2xl text-2xl sm:text-3xl lg:text-5xl text-white mb-2 md:mb-5 ${dm_serif_display.className}`}>{item.text}</h1>
+                  <a className="text-white bg-gray-950 text-sm sm:text-base p-2 px-3 rounded-sm tracking-wide hover:drop-shadow-md" href="/book-appointment">Book Appointment</a>
+                </div>
+              </SplideSlide>
+            ))
+          }
+        </Splide>
       </div>
     </section>
   )
@@ -76,8 +92,8 @@ function Hero() {
 function TagLine() {
   return (
     <section className="bg-slate-950 text-white">
-      <div className="max-w-5xl mx-auto grid place-items-center py-24">
-        <q className="mx-5 lg:mx-0 text-2xl md:text-3xl lg:text-4xl text-center leading-normal lg:leading-normal">Unlocking Financial Potential with RNC Fintax: Your Trusted Business Advisory Partner</q>
+      <div className="max-w-5xl mx-auto grid place-items-center py-20">
+        <q className={`mx-5 lg:mx-0 text-xl sm:text-2xl lg:text-3xl text-center leading-normal lg:leading-normal ${josefinsans.className}`}>Unlocking the financial potential with RNC Fintax, your trusted business advisory partner</q>
       </div>
     </section>
   )
@@ -103,7 +119,7 @@ function Stats() {
     <section>
       <div className="flex px-5 lg:px-0 flex-col lg:flex-row py-20 gap-10 lg:gap-0 items-baseline max-w-5xl mx-auto">
         <div className="flex-1">
-          <h2 className={`text-3xl lg:text-4xl leading-snug lg:mb-3 ${dm_serif_display.className}`}>RNC Fintax Is For Everyone!</h2>
+          <h2 className={`text-3xl lg:text-4xl font-semibold leading-snug lg:mb-3 ${josefinsans.className}`}>RNC Fintax Is For Everyone!</h2>
           <p className="text-lg leading-relaxed text-gray-700 lg:pr-3">RNC Fintax claims to be a solution for all your accounting problems, including services such as GST registration, company registration, income tax return filing, and trademark registration. They provide assistance and support in these areas to help businesses and individuals navigate the complexities of accounting and tax-related processes.</p>
           <Link href="/about" className="mt-6 font-medium flex items-center gap-2 hover:gap-4">
             <span className='hover:underline underline-offset-4'>About Us</span>
@@ -113,7 +129,7 @@ function Stats() {
         <div className="flex-1 w-full grid grid-cols-2 gap-5 justify-center">
           {stats.map((e, i) =>
             <div className="p-4 py-6 bg-slate-50 border grid justify-center" key={i}>
-              <h3 className="font-bold text-4xl mb-1">{e.num}<span className='text-blue-500'>+</span></h3>
+              <h3 className={`font-semibold text-4xl mb-1 ${josefinsans.className}`}>{e.num}<span className='text-blue-500'>+</span></h3>
               <p className="text-gray-500 text-lg">{e.info}</p>
             </div>
           )}
