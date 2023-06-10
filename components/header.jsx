@@ -4,7 +4,7 @@ import { Fragment, useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import { FiChevronDown } from 'react-icons/fi'
 import { TbMenu2 } from 'react-icons/tb'
-import { navlink } from '../data/navlinks'
+import { navlink } from './navlinks'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 
 function classNames(...classes) {
@@ -147,6 +147,6 @@ export default function Header() {
 
 function Logo() {
     return (
-        <Image className='w-auto h-auto' width={90} height={30} src="/logo.png" alt="RNC Fintax" priority />
+        <Image className='object-contain object-center' width={112} height={56} src="/logo.png" alt="RNC Fintax" priority />
     )
 }

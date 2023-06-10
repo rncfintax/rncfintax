@@ -90,7 +90,7 @@ export default function Footer() {
               <ul className="text-gray-400 font-medium">
                 {item.links.map((e, j) => (
                   <li key={j} className="mb-2 break-words">
-                    <Link href={e.href} className="hover:underline">
+                    <Link href={e.href} className="hover:underline text-xs sm:text-sm md:text-base">
                       {e.title}
                     </Link>
                   </li>
