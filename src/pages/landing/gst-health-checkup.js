@@ -26,7 +26,7 @@ export default function GSTHealthCheckup() {
             </ArticleWrapper>
             <section className='py-20 bg-slate-100'>
                 <div className='w-full md:w-96 lg:w-115 mx-auto p-5 md:p-10 md:rounded-lg bg-white drop-shadow-xl'>
-                    <h2 className={`text-2xl font-bold text-center ${josefinsans.className}`}>Register a free GST health checkup session</h2>
+                    <h2 className={`text-2xl font-bold text-center mb-5 ${josefinsans.className}`}>Register Now</h2>
                     <GSTHealthCheckupForm />
                 </div>
             </section>
@@ -60,13 +60,13 @@ function Hero() {
                         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 bg-white">
                                 Limited time offer ending in {' '}
-                                <a href="#" className="font-semibold text-blue-600">
+                                <div className="font-semibold inline text-blue-600">
                                     <span className="absolute inset-0" aria-hidden="true" />
                                     <Countdown
                                         date={Date.now() + (new Date('06-25-2023') - new Date())}
                                         renderer={renderer}
                                     />,<span aria-hidden="true"> 🎉</span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div className="text-center">

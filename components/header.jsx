@@ -20,7 +20,7 @@ export default function Header() {
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">RNC Fintax</span>
-                        <Image loading="lazy" width={100} height={50} src="/logo.png" alt="RNC Fintax" />
+                        <Image width={100} height={50} src="/logo.png" alt="RNC Fintax" />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -87,7 +87,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">RNC Fintax</span>
-                            <Image loading="lazy" width={100} height={50} src="/logo.png" alt="RNC Fintax" />
+                            <Image width={100} height={50} src="/logo.png" alt="RNC Fintax" />
                         </Link>
                         <button
                             type="button"
