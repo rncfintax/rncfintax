@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
+import hero1 from '../../public/img/hero1.webp'
+import hero2 from '../../public/img/hero2.webp'
+import hero3 from '../../public/img/hero3.webp'
+import hero4 from '../../public/img/hero4.webp'
 import '@splidejs/react-splide/css'
 import { BsArrowRight } from "react-icons/bs"
 import reviews from "../../data/reviews.json"
@@ -40,19 +44,19 @@ export default function Home() {
 
 const hero_data = [
   {
-    img: "/img/hero1.webp",
+    img: hero1,
     text: "Helping Businesses"
   },
   {
-    img: "/img/hero2.webp",
+    img: hero2,
     text: "Goods & Service Tax Filing"
   },
   {
-    img: "/img/hero3.webp",
+    img: hero3,
     text: "Startup Registration"
   },
   {
-    img: "/img/hero4.webp",
+    img: hero4,
     text: "File Tax Return"
   }
 ]
@@ -60,11 +64,11 @@ const hero_data = [
 function Hero() {
   return (
     <section>
-      <div className="h-80 md:h-96 lg:h-320 relative overflow-hidden">
+      <div className="relative overflow-hidden">
         <Splide className='w-full' options={{ type: 'loop', arrows: false, pagination: false, autoplay: "play" }} aria-label="RNC Fintax">
           {hero_data.map((item, i) => (
             <SplideSlide className='relative w-full' key={i}>
-              <Image className='h-80 md:h-96 lg:h-320 aspect-video w-full object-cover object-center absolute' alt={item.text} src={item.img} width={1024} height={576} blurDataURL={item.img} placeholder='blur' priority />
+              <Image className='h-80 md:h-96 lg:h-320 aspect-video w-full object-cover object-center absolute' alt={item.text} src={item.img} width={1024} height={576} placeholder='blur' />
               <div className='h-80 md:h-96 lg:h-320 w-full hover:backdrop-blur-sm bg-gray-950/30 relative flex flex-col justify-center items-center'>
                 <h1 className={`drop-shadow-2xl text-2xl sm:text-3xl lg:text-5xl text-white mb-2 md:mb-5 ${dm_serif_display.className}`}>{item.text}</h1>
                 <a className="text-white bg-gray-950 text-sm sm:text-base p-2 px-3 rounded-sm tracking-wide hover:drop-shadow-md" href="/book-appointment">Book Appointment</a>
