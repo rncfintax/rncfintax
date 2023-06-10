@@ -18,9 +18,9 @@ export default function About() {
 
 function AboutHero() {
     return (
-        <section className="h-80 lg:h-320 relative overflow-hidden">
-            <Image className="h-80 lg:h-320 w-full object-cover object-center absolute" src="/img/about.webp" width={640} height={427} />
-            <div className="h-80 lg:h-320 flex justify-center items-center relative backdrop-blur-sm bg-gray-950/30">
+        <section className="h-80 md:h-96 lg:h-320 relative overflow-hidden">
+            <Image alt="About Us" className="h-80 md:h-96 lg:h-320 w-full object-cover object-center absolute" src="/img/about.webp" width={640} height={427} priority />
+            <div className="h-80 md:h-96 lg:h-320 flex justify-center items-center relative backdrop-blur-sm bg-gray-950/30">
                 <h1 className={`${dm_serif_display.className} text-center text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl drop-shadow-2xl`}>We're Changing the whole game.</h1>
             </div>
         </section>

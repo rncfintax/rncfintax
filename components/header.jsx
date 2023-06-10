@@ -20,7 +20,7 @@ export default function Header() {
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">RNC Fintax</span>
-                        <Image width={100} height={50} src="/logo.png" alt="RNC Fintax" />
+                        <Image className='w-auto h-auto' width={100} height={50} src="/logo.png" alt="RNC Fintax" priority />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -70,7 +70,7 @@ export default function Header() {
                                 </Transition>
                             </Popover>
                             :
-                            <Link key={i} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                            <Link key={i + 100} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
                                 {item.title}
                             </Link>
                     ))}
@@ -87,7 +87,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">RNC Fintax</span>
-                            <Image width={100} height={50} src="/logo.png" alt="RNC Fintax" />
+                            <Image className='w-auto h-auto' width={100} height={50} src="/logo.png" alt="RNC Fintax" priority />
                         </Link>
                         <button
                             type="button"
@@ -104,16 +104,16 @@ export default function Header() {
                                     {({ open }) => (
                                         navlink.map((item, i) => (
                                             item.sublinks ?
-                                                <>
-                                                    <Disclosure.Button key={i} className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
+                                                <div key={i}>
+                                                    <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
                                                         {item.title}
                                                         <BsChevronDown className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                             aria-hidden="true" />
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel className="mt-2 space-y-2">
-                                                        {item.sublinks.map((e) => (
+                                                        {item.sublinks.map((e, i) => (
                                                             <Disclosure.Button
-                                                                key={e.name}
+                                                                key={i}
                                                                 as={Link}
                                                                 onClick={() => setMobileMenuOpen(false)}
                                                                 href={'/services' + item.href + e.href}
@@ -122,7 +122,7 @@ export default function Header() {
                                                             </Disclosure.Button>
                                                         ))}
                                                     </Disclosure.Panel>
-                                                </>
+                                                </div>
                                                 :
                                                 <Link onClick={() => setMobileMenuOpen(false)} key={i} href={item.href} className="vflex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 block">
                                                     {item.title}

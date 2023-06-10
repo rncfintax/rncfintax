@@ -13,8 +13,6 @@ export default function BlogPost() {
     const { bloggerPost, postLoading } = useContext(Context)
     const [myPost, setMyPost] = useState({})
 
-    console.log(myPost);
-
     useEffect(() => {
         bloggerPost.filter(item => {
             if (item.url.includes(query.slug)) {

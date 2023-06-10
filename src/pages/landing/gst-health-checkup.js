@@ -144,7 +144,6 @@ function GSTHealthCheckupForm() {
         fetch(sheetURL, { method: "POST", body: new FormData(form) })
             .then(res => {
                 form.reset()
-                console.log(res)
             })
             .catch((error) => console.error("Error!", error.message))
     }

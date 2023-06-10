@@ -25,7 +25,6 @@ const post_info = {
 };
 
 export default function Form16() {
-  console.log(Article())
   return (
     <>
       <Hero data={post_info} />

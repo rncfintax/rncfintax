@@ -5,7 +5,6 @@ import { convert } from 'html-to-text'
 
 export default function BlogCard({ NumberOfPost, page }) {
   const { bloggerPost } = useContext(Context)
-  console.log("Number of Blog: ", bloggerPost.length);
 
   // extract thumbnail from blogger content
   function thumbnail(response) {
