@@ -10,12 +10,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  .heroimg {
-    background: url(/img/hero.jpg);
-  }
-  .aboutHero {
-    background: url(/img/about.jpg);
-  }
   .home_blog .blog_card:last-child {
     @apply md:hidden lg:flex;
   }

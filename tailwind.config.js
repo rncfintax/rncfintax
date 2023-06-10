@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        hero: "80vh",
+        320: "80vh",
       },
       minHeight: {
         160: "40rem",

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Image from "next/image"
 import { DM_Serif_Display } from "next/font/google"
 
 const dm_serif_display = DM_Serif_Display({ subsets: ["latin"], weight: ['400'] })
@@ -17,11 +18,10 @@ export default function About() {
 
 function AboutHero() {
     return (
-        <section>
-            <div className="aboutHero bg-no-repeat bg-center bg-cover">
-                <div className="flex flex-col items-center justify-center mx-auto lg:min-h-160 min-h-80 bg-slate-950/50 rounded-xl">
-                    <h1 className={`text-3xl lg:text-5xl text-center text-white lg:leading-tight px-5 lg:px-0 ${dm_serif_display.className}`}>We're Changing the whole game.</h1>
-                </div>
+        <section className="h-80 lg:h-320 relative overflow-hidden">
+            <Image className="h-80 lg:h-320 w-full object-cover object-center absolute" src="/img/about.webp" width={640} height={427} />
+            <div className="h-80 lg:h-320 flex justify-center items-center relative backdrop-blur-sm">
+                <h1 className={`${dm_serif_display.className} text-center text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl drop-shadow-2xl`}>We're Changing the whole game.</h1>
             </div>
         </section>
     )
@@ -30,6 +30,7 @@ function AboutHero() {
 function Article() {
     return (
         <section className="articleWrapper max-w-4xl mx-auto article my-16">
+            <h2>About Us</h2>
             <p>
                 Welcome to RNC Fintax, your trusted provider of curated and quality
                 services at an affordable price. We are dedicated to assisting individuals and

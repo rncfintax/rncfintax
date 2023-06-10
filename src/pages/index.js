@@ -50,19 +50,19 @@ export default function Home() {
 
 const hero_data = [
   {
-    img: "/img/hero1.jpg",
+    img: "/img/hero1.webp",
     text: "Helping Business"
   },
   {
-    img: "/img/hero2.jpg",
+    img: "/img/hero2.webp",
     text: "Goods & Service Tax Filing"
   },
   {
-    img: "/img/hero3.jpg",
+    img: "/img/hero3.webp",
     text: "Startup Registration"
   },
   {
-    img: "/img/hero4.jpg",
+    img: "/img/hero4.webp",
     text: "File Tax Return"
   }
 ]
@@ -70,13 +70,13 @@ const hero_data = [
 function Hero() {
   return (
     <section className="bg-cover bg-center">
-      <div className="h-80 lg:h-hero max-h-160 relative">
+      <div className="h-80 lg:h-320 max-h-160 relative">
         <Splide options={{ type: 'loop', arrows: false, pagination: false, autoplay: "play", rewind: true, hasTrack: true }} aria-label="RNC Fintax">
           {
             hero_data.map((item, i) => (
               <SplideSlide className='relative' key={i}>
-                <Image className='h-80 lg:h-hero w-full object-cover object-center absolute' alt={item.text} src={item.img} width={1600} height={500} />
-                <div className='h-80 lg:h-hero w-full hover:backdrop-blur-sm bg-gray-950/30 relative flex flex-col justify-center items-center'>
+                <Image className='h-80 lg:h-320 w-full object-cover object-center absolute' alt={item.text} src={item.img} width={1200} height={500} />
+                <div className='h-80 lg:h-320 w-full hover:backdrop-blur-sm bg-gray-950/30 relative flex flex-col justify-center items-center'>
                   <h1 className={`drop-shadow-2xl text-2xl sm:text-3xl lg:text-5xl text-white mb-2 md:mb-5 ${dm_serif_display.className}`}>{item.text}</h1>
                   <a className="text-white bg-gray-950 text-sm sm:text-base p-2 px-3 rounded-sm tracking-wide hover:drop-shadow-md" href="/book-appointment">Book Appointment</a>
                 </div>

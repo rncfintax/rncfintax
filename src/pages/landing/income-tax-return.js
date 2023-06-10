@@ -15,7 +15,7 @@ export default function IncomeTaxReturn() {
                 <meta name="description" content="E-Income Tax Return Filing in Khairthal, Contact us for online ITR filing." />
                 <meta property="og:title" content="E-Income Tax Retrun In Khairthal" />
                 <meta property="og:description" content="E-Income Tax Return Filing in Khairthal, Contact us for online ITR filing." />
-                <meta property="og:image" content="https://rncfintax.com/img/thumb4.jpg" />
+                <meta property="og:image" content="https://rncfintax.com/img/thumb4.webp" />
                 <meta property="og:url" content="https://rncfintax.com/landing/income-tax-return" />
             </Head>
             <Hero />

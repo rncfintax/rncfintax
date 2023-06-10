@@ -15,7 +15,7 @@ export default function Hero({ data }) {
         <meta name="description" content={data.subheading} />
         <meta property="og:title" content={data.heading} />
         <meta property="og:description" content={data.subheading} />
-        <meta property="og:image" content="https://rncfintax.com/img/thumb4.jpg" />
+        <meta property="og:image" content="https://rncfintax.com/img/thumb4.webp" />
         <meta property="og:url" content={router.asPath} />
       </Head>
       <section className="bg-gradient-to-tr from-blue-500 via-blue-500 to-purple-600 text-center text-white">
