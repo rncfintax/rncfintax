@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import Countdown from 'react-countdown'
 import { BsTelephoneFill } from "react-icons/bs"
 import ArticleWrapper from "../../../components/articlewrapper"
@@ -134,6 +134,8 @@ function Article() {
 }
 
 function GSTHealthCheckupForm() {
+    const [response, setResponse] = useState("")
+
     const sheetURL = "https://script.google.com/macros/s/AKfycbyiXN9v-oHl_qFk1uozvj1_T4p6bvEPVUinhXF9yUMWY8gyut5VHX2OBt4pbOCmS2bo/exec"
 
     function handleForm(e) {
@@ -144,8 +146,12 @@ function GSTHealthCheckupForm() {
         fetch(sheetURL, { method: "POST", body: new FormData(form) })
             .then(res => {
                 form.reset()
+                setResponse("your response has been recorded")
             })
-            .catch((error) => console.error("Error!", error.message))
+            .catch((error) => {
+                console.error("Error!", error.message)
+                setResponse("Error: ", error.message)
+            })
     }
 
     return (
@@ -167,6 +173,9 @@ function GSTHealthCheckupForm() {
                 <input pattern='^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$' type="text" name='GSTNumber' id="gstnum" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-blue-500" placeholder='GST Number' />
             </div>
             <input type="submit" className="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
+            <div className='mt-5'>
+                <p className='text-sm text-center'>{response}</p>
+            </div>
         </form>
     )
 }

@@ -24,7 +24,7 @@ export default function Contact() {
                         <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
                             <div className="px-6 lg:mt-0">
                                 <h2 className="title-font mt-4 font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-                                <p className="mt-1">WARD NO 10, opp. Shiv Temple, Old Anaj Mandi, Khairthal, Rajasthan 301404</p>
+                                <p className="mt-1">WARD NO 14 near SHRI SHYAM TEMPLE Old Anaj Mandi Khairthal, Rajasthan 301404 India</p>
                                 <h2 className="title-font mt-4 font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
                                 <a href="mailto:Info.rncfintax@gmail.com" className="text-blue-500 leading-relaxed">Info.rncfintax@gmail.com</a>
                                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
