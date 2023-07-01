@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { BsTelephoneFill } from "react-icons/bs"
 import ArticleWrapper from "../../../components/articlewrapper"
 import { Josefin_Sans } from "next/font/google"
@@ -99,7 +99,9 @@ function Article() {
 }
 
 function IncomeTaxReturnFrom() {
-    const sheetURL = "https://script.google.com/macros/s/AKfycbw3VWvVemqovzpzWCw6NbuCY9y7YR2X52-yOyybtwqwuA1D5_3QO9tzl0fh0HjCfE6D/exec"
+    const [response, setResponse] = useState("")
+
+    const sheetURL = "https://script.google.com/macros/s/AKfycbyGp7OVpV4j7HeoULgtK2PDKJhfv_1m1ZT_myt3MATZ5fp5-mHWbP-Ao6ZosMzvTReu/exec"
 
     function handleForm(e) {
         e.preventDefault()
@@ -109,8 +111,12 @@ function IncomeTaxReturnFrom() {
         fetch(sheetURL, { method: "POST", body: new FormData(form) })
             .then(res => {
                 form.reset()
+                setResponse("your response has been recorded")
             })
-            .catch((error) => console.error("Error!", error.message))
+            .catch((error) => {
+                console.error("Error!", error.message)
+                setResponse("Error: ", error.message)
+            })
     }
 
     return (
@@ -132,6 +138,9 @@ function IncomeTaxReturnFrom() {
                 <textarea type="tel" name='Message' id="message" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5 outline-emerald-500" placeholder='Message...'></textarea>
             </div>
             <input type="submit" className="text-white bg-emerald-500 hover:bg-emerald-700 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center" />
+            <div className='mt-5'>
+                <p className='text-sm text-center'>{response}</p>
+            </div>
         </form>
     )
 }

@@ -9,6 +9,16 @@ export default function Document() {
         <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" type="image/png" />
         <meta name="theme-color" content="#000000" />
         <meta property="og:locale" content="en_US" />
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMH4SJXPZD"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || []
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date())
+          gtag('config', 'G-BMH4SJXPZD')
+          `
+        }}/>
       </Head>
       <body className='text-slate-950'>
         <Main />

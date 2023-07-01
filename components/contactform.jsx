@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export default function ContactForm() {
-    const [resMsg, setResMsg] = useState("")
+    const [response, setResponse] = useState("")
 
     const sheetURL = "https://script.google.com/macros/s/AKfycbyn67dLN6useZWwXHrWVDyfC8fzlM0Q1u60pTWRWX70jDcYHdvhvJCYGTBrA-12Bq83/exec"
 
@@ -13,11 +13,11 @@ export default function ContactForm() {
         fetch(sheetURL, { method: "POST", body: new FormData(form) })
             .then(res => {
                 form.reset()
-                setResMsg("Your respose is submitted")
+                setResponse("your response has been recorded")
             })
             .catch(err => {
                 console.error("Error!", err.message)
-                setResMsg("something went wrong")
+                setResponse("Error: ", err.message)
             })
     }
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
                     <textarea id="message" name="Message" className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                 </div>
                 <input type="submit" className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg w-full" />
-                <p className="text-center mt-3">{resMsg}</p>
+                <p className="text-center mt-3">{response}</p>
             </form>
         </>
     )
