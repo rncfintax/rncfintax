@@ -43,11 +43,21 @@ function PaymentCard({ data, heading }) {
                             <span className="ml-5 text-white bg-green-700 p-px px-1">{data.percentage}% Off</span>
                         </p>
                     </div>
+                    <div className="my-10 flex flex-col gap-5 lg:px-10">
+                        <a href="tel:9256317271"
+                            className="block text-center rounded-lg px-3 py-2.5 text-base font-medium leading-7 text-white bg-black hover:bg-blue-500">
+                            Book Appointment
+                        </a>
+                        <a href={`https://api.whatsapp.com/send?phone=+919256317271&text=*${heading}*: _₹${data.price}_`}
+                            className="block text-center rounded-lg px-3 py-2.5 text-base font-medium leading-7 text-white bg-green-500 hover:bg-green-600">
+                            WhatsApp
+                        </a>
+                    </div>
                 </div>
                 <div className="flex-1">
                     <h2 className="flex gap-2 items-center text-lg font-medium">
                         <GrDocumentText />
-                        <span>Document Required</span>
+                        <span className="font-semibold">Document Required</span>
                     </h2>
                     <ul className="mt-3">
                         {data.list.length <= 1 ?
@@ -59,7 +69,7 @@ function PaymentCard({ data, heading }) {
                                 {data.list.map((item, i) => (
                                     <li key={i} className="flex items-center gap-2">
                                         <GrFormCheckmark className="text-blue-500 block" fontSize={12} />
-                                        <span>{item}</span>
+                                        <span className="text-sm">{item}</span>
                                     </li>
                                 ))}
                             </ul>
