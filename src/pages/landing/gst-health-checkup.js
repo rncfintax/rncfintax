@@ -63,7 +63,7 @@ function Hero() {
                                 <div className="font-semibold inline text-blue-600">
                                     <span className="absolute inset-0" aria-hidden="true" />
                                     <Countdown
-                                        date={Date.now() + (new Date('06-25-2023') - new Date())}
+                                        date={Date.now() + (new Date('08-15-2023') - new Date())}
                                         renderer={renderer}
                                     />,<span aria-hidden="true"> 🎉</span>
                                 </div>
