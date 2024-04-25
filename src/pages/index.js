@@ -32,7 +32,6 @@ export default function Home() {
       <TagLine />
       <Stats />
       <Services />
-      <HomeBlog />
       <Testimonial />
       <LogoCloud />
       <Link href="/contact">
